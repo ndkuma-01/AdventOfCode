@@ -18,17 +18,10 @@ public class AoC2 extends RUNDAY implements DAYID {
         int answer = 0;
         while(input.hasLines()){
             String[] parts = input.nextLine().split("x");
-            ArrayList <Integer> areas = new ArrayList<Integer>();
-            areas.add(Integer.parseInt(parts[0]) *Integer.parseInt(parts[1]));
-            areas.add(Integer.parseInt(parts[0]) *Integer.parseInt(parts[2]));
-            areas.add(Integer.parseInt(parts[1]) *Integer.parseInt(parts[2]));
+            ArrayList <Integer> areas = new ArrayList<Integer>(Arrays.asList(Integer.parseInt(parts[0]) *Integer.parseInt(parts[1]),Integer.parseInt(parts[0]) *Integer.parseInt(parts[2]),Integer.parseInt(parts[1]) *Integer.parseInt(parts[2])));
             Collections.sort(areas);
-
             answer += areas.get(0) + 2 * (Integer.parseInt(parts[0]) *Integer.parseInt(parts[1])) + 2* Integer.parseInt(parts[1]) *Integer.parseInt(parts[2]) + 2 * Integer.parseInt(parts[0]) *Integer.parseInt(parts[2]);
-
-
         }
-
         return String.valueOf(answer);
     }
 
@@ -38,15 +31,9 @@ public class AoC2 extends RUNDAY implements DAYID {
         int answer = 0;
         while(input.hasLines()) {
             String[] parts = input.nextLine().split("x");
-            int l = Integer.parseInt(parts[0]);
-            int w = Integer.parseInt(parts[1]);
-            int h = Integer.parseInt(parts[2]);
-            ArrayList<Integer> dimensions = new ArrayList<Integer>();
-            dimensions.add(l);
-            dimensions.add(w);
-            dimensions.add(h);
-            Collections.sort(dimensions);
-            answer += 2 * dimensions.get(0) + 2 * dimensions.get(1) + (dimensions.get(0) * dimensions.get(1) * dimensions.get(2));
+            ArrayList<Integer> d = new ArrayList<Integer>(Arrays.asList(Integer.parseInt(parts[0]),Integer.parseInt(parts[1]),Integer.parseInt(parts[2])));
+            Collections.sort(d);
+            answer += 2 * d.get(0) + 2 * d.get(1) + (d.get(0) * d.get(1) * d.get(2));
 
         }
         return String.valueOf(answer);
