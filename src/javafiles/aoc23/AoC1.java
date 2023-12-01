@@ -11,10 +11,6 @@ import java.util.List;
 import java.util.stream.IntStream;
 
 public class AoC1 implements DAYID {
-
-
-
-
     @Override
     public String p1() throws FileNotFoundException {
         GetInputs input = new GetInputs(23, 1);
@@ -30,7 +26,6 @@ public class AoC1 implements DAYID {
         }
         return String.valueOf(nums.stream().mapToInt(x -> x).sum());
     }
-
     @Override
     public String p2() throws FileNotFoundException {
         GetInputs input = new GetInputs(23, 1);
@@ -40,25 +35,16 @@ public class AoC1 implements DAYID {
             String line = input.nextLine();
             String result = "";
             for (int i = 0; i < line.length(); i++) {
-                if (line.charAt(i) - '0' >= 0 && line.charAt(i) - '0' <= 9) {
-                    result += "" + line.charAt(i);
-                }
+                 result += (line.charAt(i) - '0' >= 0 && line.charAt(i) - '0' <= 9)? "" + line.charAt(i) : "";
                 String curr = line.substring(i);
-                for (int j = 0; j < arr.length; j++) {
-                    if (curr.startsWith(arr[j])) {
-                        int temp = j + 1;
-                        result += "" + temp;
-                    }
-                }
+                 List<Boolean> words = IntStream.range(0,arr.length).mapToObj(x -> curr.startsWith(arr[x])).toList();
+                 if(words.contains(true)){result += (words.indexOf(true) + 1);}
             }
                 nums.add(Integer.parseInt(result.substring(0, 1) + result.substring(result.length() - 1)));
         }
         return String.valueOf(nums.stream().mapToInt(x -> x).sum());
     }
-
-
     public static void main(String[] args) throws FileNotFoundException {
-
         RUNDAY.run(new AoC1());
     }
 }
