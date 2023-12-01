@@ -33,7 +33,6 @@ public class AoC1 extends RUNDAY implements DAYID {
             }else{
                 answer++;
             }
-
             if(answer < 0){
                 answer = i + 1;
                 break;

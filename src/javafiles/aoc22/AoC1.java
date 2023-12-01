@@ -74,7 +74,7 @@ public class AoC1 implements DAYID {
         }
         int ans = big + big2 + big3;
         //the variable ans has the top 3 summed together and gets returned as the answer
-        return  String.valueOf(ans);
+        return String.valueOf(ans);
     }
     public static void main(String[] args) throws FileNotFoundException {
         //this simply will run the  whole program, as declared by the RUNDAY class
