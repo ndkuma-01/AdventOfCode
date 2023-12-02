@@ -11,8 +11,6 @@ import java.util.HashSet;
 import java.util.Map;
 
 public class Aoc2 implements DAYID {
-
-
     @Override
     public String p1() throws FileNotFoundException {
         GetInputs in = new GetInputs(23,2);
@@ -41,26 +39,16 @@ public class Aoc2 implements DAYID {
         GetInputs in = new GetInputs(23,2);
         int sum = 0;
         while(in.hasLines()){
-            String line = in.nextLine();
-            int id = Integer.parseInt(line.split(":")[0].split( " ")[1].trim());
-            line = line.split(":")[1];
+            String line = in.nextLine().split(":")[1];
             HashMap<String, Integer> min = new HashMap<String,Integer>(Map.of("red", -1, "blue",-1, "green", -1));
-            boolean goodGame = true;
             for(String games : line.split(";")){
                 for(String hand :  games.split(",")) {
                     int numOfBalls = Integer.parseInt(hand.split(" ")[1].trim());
                     String col = hand.split(" ")[2].trim();
                     min.put(col, Math.max(min.get(col), numOfBalls));
-                    if (numOfBalls > Map.of("red", 12, "blue", 14, "green", 13).get(col)) {
-                        goodGame = false;
-                    }
                 }
             }
-            int power = 1;
-            for(int s : min.values()){
-                power*= s;
-            }
-            sum += power;
+            sum += (min.values().stream().reduce(1, (sub, el) -> sub * el));
         }
         return String.valueOf(sum);
     }

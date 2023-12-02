@@ -21,6 +21,7 @@ public class AoC1 implements DAYID {
             result += "" + temp.stream().map(String::valueOf).collect(Collectors.joining(""));
             nums.add(Integer.parseInt(result.substring(0, 1) + result.substring(result.length() - 1)));
         }
+
         return String.valueOf(nums.stream().mapToInt(x -> x).sum());
     }
     @Override

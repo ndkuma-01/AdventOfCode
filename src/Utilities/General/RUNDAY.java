@@ -8,7 +8,7 @@ public class RUNDAY {
         String result = "DAY ";
         int i = temp.indexOf("@");
         int j = temp.indexOf("C");
-        result += temp.substring(j+1,i);
+        result += temp.substring(i-1,i);
         System.out.println("------"+result+"------");
         long part1Start = System.currentTimeMillis();
         String part1 = d.p1();
