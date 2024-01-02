@@ -13,7 +13,7 @@ import java.util.*;
 
 
 public class GetInputs {
-    String sessionCookie = "53616c7465645f5f931f38c2c38ea4617325ca47539e3ffec1ecc2e75e0cfd5d576eb5b719595552fd0b5b3c6ae386fbee55459b0356ea96c13bc49209a6426d";
+    String sessionCookie = "INSERT YOUR OWN";
     String URLTemplate = "https://adventofcode.com/2023/day/1/input";
     int day = 0;
     private final OkHttpClient _httpClient = new OkHttpClient();
