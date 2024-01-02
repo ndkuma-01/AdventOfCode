@@ -6,6 +6,7 @@ import Utilities.General.RUNDAY;
 import Utilities.aoc22.HyperDuplex;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -21,7 +22,7 @@ public class AoC17 implements DAYID {
     }
 
     @Override
-    public String p1() throws FileNotFoundException {
+    public String p1() throws IOException {
         //gets the input for day 17
         GetInputs input = new GetInputs(22,17);
         //the first thing that the program will do is take into account the different shapes of the rocks
@@ -148,7 +149,7 @@ public class AoC17 implements DAYID {
         }
     }
     @Override
-    public String p2() throws FileNotFoundException {
+    public String p2() throws IOException {
         //takes in the input for day 17
         GetInputs input = new GetInputs(22,17);
         String jets = input.nextLine();
@@ -461,7 +462,7 @@ public class AoC17 implements DAYID {
     }
 
 
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) throws IOException {
         RUNDAY.run(new AoC17());
     }
 }

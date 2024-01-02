@@ -5,12 +5,13 @@ import Utilities.General.GetInputs;
 import Utilities.General.RUNDAY;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class AoC3 implements DAYID {
 
     @Override
-    public String p1() throws FileNotFoundException {
+    public String p1() throws IOException {
         GetInputs input = new GetInputs(21,3);
         int onesCounter = 0;
         ArrayList<String> lines = new ArrayList<String>();
@@ -53,11 +54,11 @@ public class AoC3 implements DAYID {
     }
 
     @Override
-    public String p2() throws FileNotFoundException {
+    public String p2() throws IOException {
         return null;
     }
 
-    public static void main(String[] args) throws FileNotFoundException{
+    public static void main(String[] args) throws IOException {
         RUNDAY.run(new AoC3());
     }
 

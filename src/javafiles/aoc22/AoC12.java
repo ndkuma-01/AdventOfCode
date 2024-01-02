@@ -6,6 +6,7 @@ import Utilities.General.RUNDAY;
 import Utilities.aoc22.HyperDuplex;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -80,7 +81,7 @@ public class AoC12 implements DAYID {
     }
 
     @Override
-    public String p1() throws FileNotFoundException{
+    public String p1() throws IOException{
         //gets the input for day 12
         GetInputs input = new GetInputs(22,12);
         //refreshes the heightmap
@@ -115,7 +116,7 @@ public class AoC12 implements DAYID {
 
 
     @Override
-    public String p2() throws FileNotFoundException {
+    public String p2() throws IOException {
         //takes in the input for day 12
         GetInputs input = new GetInputs(22,12);
         //refreshes the heightmap
@@ -152,7 +153,7 @@ public class AoC12 implements DAYID {
         }
         return Integer.toString(min);
     }
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) throws IOException {
         RUNDAY.run(new AoC12());
     }
 

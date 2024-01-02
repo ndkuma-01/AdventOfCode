@@ -5,15 +5,18 @@ import Utilities.General.GetInputs;
 import Utilities.General.RUNDAY;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Arrays;
 
 public class AoC1 implements DAYID {
     @Override
-    public String p1() throws FileNotFoundException {
+    public String p1() throws IOException {
         //Grabs the input for day 1
         GetInputs INPUT1 = new GetInputs(22,1);
         //creates a variable for holding the top three biggest number of calories held
         int big = Integer.MIN_VALUE, big2=Integer.MIN_VALUE, big3 = Integer.MIN_VALUE;
         int temp =0;
+        System.out.println(Arrays.stream(INPUT1.fetchInput().split("\\B\n")).map(x -> Arrays.stream(x.split("\n")).mapToInt(i -> Integer.parseInt(i.trim())).sum()).mapToInt(Integer::valueOf).max().getAsInt());
         //this while loop iterates through each line
         while(INPUT1.hasLines()){
             //takes in a single line
@@ -47,7 +50,7 @@ public class AoC1 implements DAYID {
         return String.valueOf(big);
     }
     @Override
-    public String p2() throws FileNotFoundException {
+    public String p2() throws IOException {
         //this is the exact same as the first part however instead of just returning the top 1, it sums and returns the sum of the top 3 see line
         //78
         GetInputs INPUT2 = new GetInputs(22,1);
@@ -76,7 +79,7 @@ public class AoC1 implements DAYID {
         //the variable ans has the top 3 summed together and gets returned as the answer
         return String.valueOf(ans);
     }
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) throws IOException {
         //this simply will run the  whole program, as declared by the RUNDAY class
         //it also prints out the elapsed time it takes for each part too run
         RUNDAY.run(new AoC1());

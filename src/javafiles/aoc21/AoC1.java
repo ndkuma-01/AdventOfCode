@@ -5,6 +5,7 @@ import Utilities.General.GetInputs;
 import Utilities.General.RUNDAY;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class AoC1 implements DAYID {
@@ -13,7 +14,7 @@ public class AoC1 implements DAYID {
 
 
     @Override
-    public String p1() throws FileNotFoundException {
+    public String p1() throws IOException {
         GetInputs input = new GetInputs(21,1);
         ArrayList<Integer> sweeps = new ArrayList<Integer>();
         while(input.hasLines()){
@@ -30,7 +31,7 @@ public class AoC1 implements DAYID {
     }
 
     @Override
-    public String p2() throws FileNotFoundException {
+    public String p2() throws IOException {
         GetInputs input = new GetInputs(21, 1);
         ArrayList<Integer> sweeps = new ArrayList<Integer>();
         while (input.hasLines()) {
@@ -49,7 +50,7 @@ public class AoC1 implements DAYID {
         }
         return String.valueOf(answer);
     }
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) throws IOException {
         RUNDAY.run(new AoC1());
     }
 }

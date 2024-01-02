@@ -5,6 +5,7 @@ import Utilities.General.GetInputs;
 import Utilities.General.RUNDAY;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.*;
 
 public class AoC18 implements DAYID {
@@ -13,7 +14,7 @@ public class AoC18 implements DAYID {
 
 
     @Override
-    public String p1() throws FileNotFoundException {
+    public String p1() throws IOException {
         //gets the input for day 18
         GetInputs input = new GetInputs(22,18);
         String s;
@@ -151,7 +152,7 @@ public class AoC18 implements DAYID {
     }
 
     @Override
-    public String p2() throws FileNotFoundException {
+    public String p2() throws IOException {
         GetInputs input = new GetInputs(22,18);
         String s;
         List<Cube> cubes = new ArrayList<>();
@@ -251,7 +252,7 @@ public class AoC18 implements DAYID {
         return String.valueOf(pt2);
     }
 
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) throws IOException {
         RUNDAY.run(new AoC18());
     }
 }

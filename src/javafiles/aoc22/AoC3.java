@@ -5,10 +5,11 @@ import Utilities.General.GetInputs;
 import Utilities.General.RUNDAY;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 
 public class AoC3 implements DAYID {
     @Override
-    public String p1() throws FileNotFoundException {
+    public String p1() throws IOException {
         //takes in the input for day 3
         GetInputs INPUT1 = new GetInputs(22,3);
         int total = 0;
@@ -29,7 +30,7 @@ public class AoC3 implements DAYID {
         return String.valueOf(total);
     }
     @Override
-    public String p2() throws FileNotFoundException {
+    public String p2() throws IOException {
         GetInputs INPUT2 = new GetInputs(22,3);
         int total = 0;
         //iterates through all the lines
@@ -106,7 +107,7 @@ public class AoC3 implements DAYID {
         return result;
     }
 
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) throws IOException {
         RUNDAY.run(new AoC3());
     }
 }

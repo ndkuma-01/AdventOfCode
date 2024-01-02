@@ -6,6 +6,7 @@ import Utilities.General.RUNDAY;
 import Utilities.aoc22.Monkey;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -25,7 +26,7 @@ public class AoC11 implements DAYID {
 
     }
     @Override
-    public String p1() throws FileNotFoundException {
+    public String p1() throws IOException {
         //first takes in the input for day 11
         GetInputs input = new GetInputs(22,11);
         //creates a list of a custom made data type called monkeys
@@ -121,7 +122,7 @@ public class AoC11 implements DAYID {
         return String.valueOf(answer);
     }
     @Override
-    public String p2() throws FileNotFoundException {
+    public String p2() throws IOException {
         //takes in the input for day 11
         GetInputs input = new GetInputs(22,11);
         //creates an array list of a custom data type called monkeys
@@ -220,7 +221,7 @@ public class AoC11 implements DAYID {
         Long answer = cnt[cnt.length -2] * cnt[cnt.length -1];
         return String.valueOf(answer);
     }
-    public static void main(String[] args)throws FileNotFoundException {
+    public static void main(String[] args)throws IOException {
         RUNDAY.run(new AoC11());
     }
 }

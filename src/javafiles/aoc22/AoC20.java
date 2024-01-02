@@ -7,6 +7,7 @@ import Utilities.aoc22.Duplex20;
 import Utilities.aoc22.Duplex21;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 
 public class AoC20 implements DAYID {
     //this solution uses two different types of Duplex types called Duplex 20 and Duplex 21, they are almost identical
@@ -14,7 +15,7 @@ public class AoC20 implements DAYID {
     //of this code
 
     @Override
-    public String p1() throws FileNotFoundException {
+    public String p1() throws IOException {
         //the input is gathered from day 20
         GetInputs input = new GetInputs(22,20);
         //creates an array for all of the numbers held in the input
@@ -117,7 +118,7 @@ public class AoC20 implements DAYID {
     }
 
     @Override
-    public String p2() throws FileNotFoundException {
+    public String p2() throws IOException {
         //takes the input for day 20
         //this is essentially the exact same as the first part
         //except we first multiply all the values by the decrpyt key
@@ -193,7 +194,7 @@ public class AoC20 implements DAYID {
         return nums;
     }
 
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) throws IOException {
         RUNDAY.run(new AoC20());
     }
 }

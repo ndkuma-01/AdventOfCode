@@ -5,6 +5,7 @@ import Utilities.General.GetInputs;
 import Utilities.General.RUNDAY;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.sql.Array;
 import java.sql.SQLOutput;
 import java.util.*;
@@ -15,7 +16,7 @@ public class AoC3 implements DAYID {
     int[] coordTransform = {-1,0,1};
 
     @Override
-    public String p1() throws FileNotFoundException {
+    public String p1() throws IOException {
         GetInputs in = new GetInputs(23,3);
         Character[][] map = new Character[140][140];
         int cnt = 0;
@@ -57,7 +58,7 @@ public class AoC3 implements DAYID {
 
 
     @Override
-    public String p2() throws FileNotFoundException {
+    public String p2() throws IOException {
         GetInputs in = new GetInputs(23,3);
         Character[][] map = new Character[140][140];
         HashMap<ArrayList<Integer>, ArrayList<Integer>> gearMap = new HashMap<ArrayList<Integer>, ArrayList<Integer>>();
@@ -90,16 +91,12 @@ public class AoC3 implements DAYID {
                         }
                     }
                 }else if( runNum > 0){
-//                    System.out.println(gearMap);
                     for(ArrayList<Integer> gear : gears){
                         ArrayList<Integer> temp = new ArrayList<>();
-
-
                         if(gearMap.get(gear) ==  null){
                             temp.add(runNum);
                             gearMap.put(gear, temp);
                         }else{
-//                            System.out.println("ran");
                             temp = gearMap.get(gear);
                             temp.add(runNum);
                             gearMap.put(gear, temp);
@@ -127,7 +124,7 @@ public class AoC3 implements DAYID {
     }
 
 
-    public static void main(String[] args) throws FileNotFoundException{
+    public static void main(String[] args) throws IOException {
         RUNDAY.run(new AoC3());
     }
 }

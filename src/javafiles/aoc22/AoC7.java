@@ -6,6 +6,7 @@ import Utilities.General.RUNDAY;
 import Utilities.aoc22.Node;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class AoC7 implements DAYID {
@@ -49,7 +50,7 @@ public class AoC7 implements DAYID {
     }
 
     @Override
-    public String p1() throws FileNotFoundException {
+    public String p1() throws IOException {
         //gets the input for day 7
         GetInputs input = new GetInputs(22,7);
         //creates the intial root node
@@ -99,7 +100,7 @@ public class AoC7 implements DAYID {
     }
 
     @Override
-    public String p2() throws FileNotFoundException {
+    public String p2() throws IOException {
         //accesses the input for day 7
         GetInputs input = new GetInputs(22,7);
         //the first part of the second problem is the exact same as the first
@@ -139,7 +140,7 @@ public class AoC7 implements DAYID {
         return Long.toString(smallestMax(root, minimum));
     }
 
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) throws IOException {
         RUNDAY.run(new AoC7());
     }
 }

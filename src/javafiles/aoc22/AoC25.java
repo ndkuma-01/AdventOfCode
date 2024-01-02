@@ -5,13 +5,14 @@ import Utilities.General.GetInputs;
 import Utilities.General.RUNDAY;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
 public class AoC25 implements DAYID {
 
     @Override
-    public String p1() throws FileNotFoundException {
+    public String p1() throws IOException {
         //gets the input for day 25
         GetInputs input = new GetInputs(22,25);
         ArrayList<String> lines = new ArrayList<String>();
@@ -58,7 +59,7 @@ public class AoC25 implements DAYID {
     }
 
     @Override
-    public String p2() throws FileNotFoundException {
+    public String p2() throws IOException {
         return "NO PART 2";
     }
 
@@ -70,7 +71,7 @@ public class AoC25 implements DAYID {
         }
         return result;
     }
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) throws IOException {
         RUNDAY.run(new AoC25());
     }
 }

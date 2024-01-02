@@ -5,13 +5,14 @@ import Utilities.General.GetInputs;
 import Utilities.General.RUNDAY;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
 public class AoC21 implements DAYID {
 
     @Override
-    public String p1() throws FileNotFoundException {
+    public String p1() throws IOException {
         //takes in the input for day 21
         GetInputs input = new GetInputs(22,21);
         //creates a look up table that holds all the things that the monkeys do
@@ -48,7 +49,7 @@ public class AoC21 implements DAYID {
     }
 
     @Override
-    public String p2() throws FileNotFoundException {
+    public String p2() throws IOException {
         //takes in the input for day 21
         GetInputs input = new GetInputs(22,21);
         //creates a look up table so we can associate each monkey with either a number or an operation
@@ -152,7 +153,7 @@ public class AoC21 implements DAYID {
         return 0;
     }
 
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) throws IOException {
         RUNDAY.run(new AoC21());
     }
 }

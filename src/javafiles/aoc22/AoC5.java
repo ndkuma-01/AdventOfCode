@@ -5,12 +5,13 @@ import Utilities.General.GetInputs;
 import Utilities.General.RUNDAY;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.LinkedList;
 
 public class AoC5 implements DAYID {
     @Override
-    public String p1() throws FileNotFoundException {
+    public String p1() throws IOException {
         //takes in the manipulated test input for day 5
         //this solution although trivial isn't against the rules as they do not mention manipulating the test input in order to solve the problem
         //as the only thing required to be considered "correct" is to have gotten the correct answers
@@ -55,7 +56,7 @@ public class AoC5 implements DAYID {
 
     }
     @Override
-    public String p2() throws FileNotFoundException {
+    public String p2() throws IOException {
         //takes in the input for day 5
         GetInputs INPUT2 = new GetInputs(22,5);
         //takes in the boxes and puts them into their respective stacks
@@ -119,7 +120,7 @@ public class AoC5 implements DAYID {
         }
         return stacks;
     }
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) throws IOException {
         RUNDAY.run(new AoC5());
     }
 }

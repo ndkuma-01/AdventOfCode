@@ -7,6 +7,7 @@ import Utilities.aoc22.Cyclones;
 import Utilities.aoc22.HyperDuplex;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.stream.Collectors;
@@ -17,7 +18,7 @@ public class AoC24 implements DAYID {
     HashSet<HyperDuplex> bounds;
 
     @Override
-    public String p1() throws FileNotFoundException {
+    public String p1() throws IOException {
         //takes in the input for day 24
         GetInputs input = new GetInputs(22,24);
         //creates an array lists of the custom data type called cyclone
@@ -115,7 +116,7 @@ public class AoC24 implements DAYID {
     }
 
     @Override
-    public String p2() throws FileNotFoundException {
+    public String p2() throws IOException {
         //gets the input for day 24
         GetInputs input = new GetInputs(22,24);
         ArrayList<Cyclones> cyclones = new ArrayList<>();
@@ -300,7 +301,7 @@ public class AoC24 implements DAYID {
         return Integer.toString(totalTrip);
     }
 
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) throws IOException {
         RUNDAY.run(new AoC24());
     }
 }

@@ -5,6 +5,7 @@ import Utilities.General.GetInputs;
 import Utilities.General.RUNDAY;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -39,7 +40,7 @@ public class AoC23 implements DAYID {
     }
 
     @Override
-    public String p1() throws FileNotFoundException {
+    public String p1() throws IOException {
         //gets the inputs from day 23
         GetInputs inputs = new GetInputs(22,23);
         String s;
@@ -126,7 +127,7 @@ public class AoC23 implements DAYID {
     }
 
     @Override
-    public String p2() throws FileNotFoundException {
+    public String p2() throws IOException {
         //get inputs from day 23
         GetInputs inputs = new GetInputs(22,23);
         String s;
@@ -282,7 +283,7 @@ public class AoC23 implements DAYID {
             }
         }
     }
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) throws IOException {
         RUNDAY.run(new AoC23());
     }
 }

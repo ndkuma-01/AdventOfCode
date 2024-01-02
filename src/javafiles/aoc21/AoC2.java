@@ -5,6 +5,7 @@ import Utilities.General.GetInputs;
 import Utilities.General.RUNDAY;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.HashMap;
 
 public class AoC2 implements DAYID {
@@ -15,7 +16,7 @@ public class AoC2 implements DAYID {
     HashMap<String, Integer> map = new HashMap<String, Integer>();
 
     @Override
-    public String p1() throws FileNotFoundException {
+    public String p1() throws IOException {
         GetInputs input = new GetInputs(21,2);
         while(input.hasLines()){
             String[] parts = input.nextLine().split(" ");
@@ -31,7 +32,7 @@ public class AoC2 implements DAYID {
     }
 
     @Override
-    public String p2() throws FileNotFoundException {
+    public String p2() throws IOException {
         GetInputs input = new GetInputs(21,2);
         horiz = 0;
         depth = 0;
@@ -52,7 +53,7 @@ public class AoC2 implements DAYID {
         return String.valueOf(Math.abs(horiz * depth));
     }
 
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) throws IOException {
         RUNDAY.run(new AoC2());
     }
 }

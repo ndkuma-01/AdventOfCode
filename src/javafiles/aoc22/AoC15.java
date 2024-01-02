@@ -6,6 +6,7 @@ import Utilities.General.RUNDAY;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -57,7 +58,7 @@ public class AoC15 implements DAYID{
     }
 
     @Override
-    public String p1() throws FileNotFoundException {
+    public String p1() throws IOException {
         //takes in the input for day 15
         GetInputs input = new GetInputs(22,15);
         ArrayList<String> stuff = new ArrayList<String>();
@@ -149,7 +150,7 @@ public class AoC15 implements DAYID{
     }
 
     @Override
-    public String p2() throws FileNotFoundException {
+    public String p2() throws IOException {
         //gets the input for day 15
     GetInputs input = new GetInputs(22,15);
         ArrayList<String> stuff = new ArrayList<String>();
@@ -231,7 +232,7 @@ public class AoC15 implements DAYID{
         long answer = x * 4000000 + y;
         return Long.toString(answer);
     }
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) throws IOException {
         RUNDAY.run(new AoC15());
     }
 }

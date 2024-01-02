@@ -6,6 +6,7 @@ import Utilities.General.RUNDAY;
 import Utilities.aoc22.Packets;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -145,7 +146,7 @@ public class AoC13 implements DAYID {
         return 0;
     }
         @Override
-        public String p1 () throws FileNotFoundException {
+        public String p1 () throws IOException {
             //takes in the input for day 13
             GetInputs input = new GetInputs(22,13);
             //takes in the lines
@@ -191,7 +192,7 @@ public class AoC13 implements DAYID {
     }
 
         @Override
-        public String p2 () throws FileNotFoundException {
+        public String p2 () throws IOException {
         //takes in the input for day 13
         GetInputs input = new GetInputs(22,13);
         //seperates the input into lines
@@ -219,7 +220,7 @@ public class AoC13 implements DAYID {
             return String.valueOf(ans);
     }
 
-        public static void main (String[]args) throws FileNotFoundException {
+        public static void main (String[]args) throws IOException {
             RUNDAY.run(new AoC13());
         }
 

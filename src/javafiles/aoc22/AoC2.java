@@ -5,11 +5,12 @@ import Utilities.General.GetInputs;
 import Utilities.General.RUNDAY;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class AoC2 implements DAYID {
     @Override
-    public String p1() throws FileNotFoundException {
+    public String p1() throws IOException {
         //gets the inputs for the second day
         GetInputs INPUT1 = new GetInputs(22,2);
         //creates two arrays with the possible options of both the opponent and you (the player)
@@ -69,7 +70,7 @@ public class AoC2 implements DAYID {
       return String.valueOf(total);
     }
     @Override
-    public String p2() throws FileNotFoundException {
+    public String p2() throws IOException {
         //gets the inputs for day 2
         GetInputs INPUT2 = new GetInputs(22,2);
         //assigns the plays that are allowed by the opponent and the player into two arrays
@@ -153,7 +154,7 @@ public class AoC2 implements DAYID {
         //returns the total points of all the games played
         return String.valueOf(total);
     }
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) throws IOException {
         RUNDAY.run(new AoC2());
     }
 }

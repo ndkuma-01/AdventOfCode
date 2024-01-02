@@ -6,6 +6,7 @@ import Utilities.General.RUNDAY;
 import Utilities.aoc22.Duplex;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -19,7 +20,7 @@ public class AoC9 implements DAYID{
     static ArrayList<Duplex> vertexes = new ArrayList<Duplex>();
 
     @Override
-    public String p1() throws FileNotFoundException {
+    public String p1() throws IOException {
         //goes through and takes in the inputs for day nine
         GetInputs input = new GetInputs(22,9);
         //creates an arraylist of all the lines
@@ -129,7 +130,7 @@ public class AoC9 implements DAYID{
 
     }
     @Override
-    public String p2() throws FileNotFoundException {
+    public String p2() throws IOException {
         //takes in the input for day 9
         GetInputs input = new GetInputs(22,9);
         //takes in the lines
@@ -182,7 +183,7 @@ public class AoC9 implements DAYID{
         return String.valueOf(vt.size());
     }
 
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) throws IOException {
         RUNDAY.run(new AoC9());
     }
 }

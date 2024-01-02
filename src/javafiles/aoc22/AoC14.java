@@ -6,6 +6,7 @@ import Utilities.General.RUNDAY;
 import Utilities.aoc22.HyperDuplex;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.HashSet;
 
 public class AoC14 implements DAYID {
@@ -14,7 +15,7 @@ public class AoC14 implements DAYID {
     //feel free to look here: Utilities.aoc22.HyperDuplex, to see more of the features of hyperduplexes
 
     @Override
-    public String p1() throws FileNotFoundException {
+    public String p1() throws IOException {
         //takes in the input for day 14
         GetInputs input = new GetInputs(22,14);
         //creates a hashset that hold unique coordinate points of where the solid objects are in the simulation
@@ -95,7 +96,7 @@ public class AoC14 implements DAYID {
     }
 
     @Override
-    public String p2() throws FileNotFoundException {
+    public String p2() throws IOException {
         //takes in the input for day 14
         GetInputs input = new GetInputs(22,14);
         //creates a hashset that hold unique coordinate points of where the solid objects are in the simulation
@@ -178,7 +179,7 @@ public class AoC14 implements DAYID {
 
     }
 
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) throws IOException {
         RUNDAY.run(new AoC14());
     }
 }

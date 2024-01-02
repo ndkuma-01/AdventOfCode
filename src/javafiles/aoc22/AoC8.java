@@ -5,10 +5,11 @@ import Utilities.General.GetInputs;
 import Utilities.General.RUNDAY;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 
 public class AoC8 implements DAYID {
     @Override
-    public String p1() throws FileNotFoundException {
+    public String p1() throws IOException {
         //takes in the input for day 8
         GetInputs input = new GetInputs(22,8);
         //creates a 2d array for each of the trees
@@ -35,7 +36,7 @@ public class AoC8 implements DAYID {
     }
 
     @Override
-    public String p2() throws FileNotFoundException {
+    public String p2() throws IOException {
         //takes in the input for day 8
         GetInputs input = new GetInputs(22,8);
         int[][] trees = new int[99][99];
@@ -183,7 +184,7 @@ public class AoC8 implements DAYID {
         return (getSSDOWN(a, i, j) * getSSLEFT(a, i, j) * getSSUP(a, i, j) * getSSRIGHT(a, i, j));
     }
 
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) throws IOException {
         RUNDAY.run(new AoC8());
     }
 }

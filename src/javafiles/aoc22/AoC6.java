@@ -5,11 +5,12 @@ import Utilities.General.GetInputs;
 import Utilities.General.RUNDAY;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.HashSet;
 
 public class AoC6 implements DAYID {
     @Override
-    public String p1() throws FileNotFoundException {
+    public String p1() throws IOException {
         //takes in the input for day 6
         GetInputs INPUT = new GetInputs(22,6);
         //takes in the main line
@@ -35,7 +36,7 @@ public class AoC6 implements DAYID {
         }
     }
     @Override
-    public String p2() throws FileNotFoundException {
+    public String p2() throws IOException {
         //the inputs are taken in for day 6
         GetInputs INPUT = new GetInputs(22,6);
         //the main line is taken in
@@ -57,7 +58,7 @@ public class AoC6 implements DAYID {
         }
 
     }
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) throws IOException {
         RUNDAY.run(new AoC6());
     }
 }
